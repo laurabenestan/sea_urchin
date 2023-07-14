@@ -1,20 +1,29 @@
 # Sea_urchin
 
-Sea urchin population genomics. 
+Here, we investigate population structure in sea urchin population genomics. 
+First a sampling map showing all sampling locations in relation to oceanic currents was created with the R script.
 
-First a sampling map showing sampling locations was perfromed with the R script.
 
 Figure 1. Sampling design
 
+We use the function `genet.dist` available in [hierfstat](https://rdrr.io/cran/hierfstat/man/genet.dist.html) R package.
+This function estimate the pairwise FST values according to Weir & Cockerham (1984).
+FST measures the amount of genetic differentiation among populations (and simultaneously the extent to which individuals within populations are similar to one another).
+A total of 55 pairwise comparisons (i.e. (n*(n-1))/2; 11*10)/2) ranges from 0 to 0.055.
 
-Figure 2. Biplots Het SNPs/mtDNA
+![Figure 4 - Index of genetic differntiation](FST_matrix.pdf)
+
+A total of 48 P-values were non significant.
+The P-values were tighly associated to the boostrap tree obtained on FST.
 
 
-Figure 3. PCA - ligne Wallace Bali - Lombok (piechart)
+Variation	 %var  F-stat	F-value	  c.i.2.5% c.i.97.5%	P-value	    
+|:-----------------|----:|------:|-------:|--------:|-----------:|
+|Within individuals|0.669|	Fit	 |0.331	  |0.327	  |0.334	--	 |
+|Within location	 |0.310|	Fis	 |0.317	  |0.313	  |0.320	0.001|
+|Among location	   |0.003|	Fsc	 |0.004	  |0.003	  |0.005	0.001|	
+|Among regions	   |0.017|	Fct	 |0.017	  |0.016	  |0.018	0.001|	
 
-
-Figure 4. Tableau de Fst + signif (Vérifier stamp - p-value) - détailler 
-/ plot Fst SNPs/mtDNA - Intervalle de Fst /hierarchical fst boostrap
 
 
 Figure 6. IBD nucléaire versus mtDNA / davantage perméabilité nucléaire mt
