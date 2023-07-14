@@ -11,18 +11,20 @@ This function estimate the pairwise FST values according to Weir & Cockerham (19
 FST measures the amount of genetic differentiation among populations (and simultaneously the extent to which individuals within populations are similar to one another).
 A total of 55 pairwise comparisons (i.e. (n*(n-1))/2; 11*10)/2) ranges from 0 to 0.055.
 
-![Figure 4 - Index of genetic differntiation](FST_matrix.pdf)
+![Figure 4a - Index of genetic differentiation](FST_matrix.pdf)
 
 A total of 48 P-values were non significant.
 The P-values were tighly associated to the boostrap tree obtained on FST.
 
+![Figure 4b - UPGMA tree with bootstraps values on genetic differentiation index](tree-bootstap.png)
 
-Variation	 %var  F-stat	F-value	  c.i.2.5% c.i.97.5%	P-value	    
-|:-----------------|----:|------:|-------:|--------:|-----------:|
-|Within individuals|0.669|	Fit	 |0.331	  |0.327	  |0.334	--	 |
-|Within location	 |0.310|	Fis	 |0.317	  |0.313	  |0.320	0.001|
-|Among location	   |0.003|	Fsc	 |0.004	  |0.003	  |0.005	0.001|	
-|Among regions	   |0.017|	Fct	 |0.017	  |0.016	  |0.018	0.001|	
+
+|Variation	 %var  |F-stat|F-value|c.i.2.5% |c.i.97.5%|	P-value	   | 
+|------------------|------|-------|---------|---------|------------|
+|Within individuals|0.669 |	Fit	  |0.331	  |0.327	  |0.334	--	 |
+|Within location	 |0.310 |	Fis	  |0.317	  |0.313	  |0.320	0.001|
+|Among location	   |0.003 |	Fsc	  |0.004	  |0.003	  |0.005	0.001|	
+|Among regions	   |0.017 |	Fct	  |0.017	  |0.016	  |0.018	0.001|	
 
 
 
