@@ -1,0 +1,5 @@
+Variation	%var	F-stat	F-value	c.i.2.5%	c.i.97.5%	P-value	F'-value
+Within individuals	0.669	Fit	0.331	0.327	0.334	--	--
+Within sampling location	0.310	Fis	0.317	0.313	0.320	0.001	--
+Among sampling location	0.003	Fsc	0.004	0.003	0.005	0.001	0.004
+Among regions	0.017	Fct	0.017	0.016	0.018	0.001	0.021
