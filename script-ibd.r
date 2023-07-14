@@ -146,3 +146,8 @@ ade4::mantel.rtest(as.dist(fst.subset.no.sab.par.bat), as.dist(leastDist.km.no.s
 
 ############## NICE MANTEL TEST VISUALIZATION #############
 
+fst_distances.data.melted <- melt(fst_distances.data)
+in.water.distances.melted <- melt(leastDist.km)
+colnames(leastDist.km) <- colnames(fst_distances.data)
+
+cbind(fst_distances.data.melted, in.water.distances.melted)

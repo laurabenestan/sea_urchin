@@ -1,4 +1,11 @@
-# Highlighting sea_urchin **Diadema setosum** population structure
+--- 
+title: "Sea urchin population structure" 
+output: html_document: 
+fig_width: 6 
+fig_height: 4 
+--- 
+
+# Highlighting population structure of a sea urchin species **Diadema setosum** in Indonesia
 
 Population structure in sea urchin was first investigated following these steps:
 * 1 - Sampling design
@@ -6,9 +13,10 @@ Population structure in sea urchin was first investigated following these steps:
 * 3 - Testing for Isolation by distance patterns
 
 First a sampling map showing all sampling locations in relation to oceanic currents was created using the R script.
-`r, echo=FALSE,
+
+```{r}, echo=FALSE,
 script-sampling-map.R
-`
+```
 
 ## 1 - Sampling design
 
