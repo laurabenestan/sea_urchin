@@ -144,3 +144,5 @@ leastDist.km.no.sab.par.bat <- as.matrix(leastDist.km)[-c(4,9,10),]
 ### Perform a Mantel test on euclidean and in-water distances
 ade4::mantel.rtest(as.dist(fst.subset.no.sab.par.bat), as.dist(leastDist.km.no.sab.par.bat), nrepet = 9999)
 
+############## NICE MANTEL TEST VISUALIZATION #############
+
