@@ -1,0 +1,12 @@
+Locations	Code	CODE	Longitude	Latitude	Collection Date	Number of samples
+Batam	BAD	BAT	104.17	1.157608	May-21	8
+Pari	DSPRI	PAR	106.613569	-5.864713	Aug-21	8
+Malang	GCD	MAL	112.7	-8.48	Aug-21	9
+Bali	BD	BAL	115.22837	-8.778489	juil-21	10
+Banggai	BGD	BAN	123.47235	-1.588442	nov-21	8
+Ambon	DABN	AMB	128.22	-3.65	sept-21	8
+Lombok	D	LOM	116.07939	-8.404019	sept-19	8
+Sikka	KDTT	SIK	122.51155	-8.526052	sept-21	10
+Langkai	LKD	LAN	119.093591	-5.030119	Aug-21	8
+Luwuk	LU	LUW	122.85	-0.983204	Aug-21	10
+Sabang	SBDS	SAB	95.309794	5.91	janv-20	8
