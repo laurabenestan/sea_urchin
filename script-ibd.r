@@ -146,8 +146,37 @@ ade4::mantel.rtest(as.dist(fst.subset.no.sab.par.bat), as.dist(leastDist.km.no.s
 
 ############## NICE MANTEL TEST VISUALIZATION #############
 
+### Change format wide to long
 fst_distances.data.melted <- melt(fst_distances.data)
-in.water.distances.melted <- melt(leastDist.km)
-colnames(leastDist.km) <- colnames(fst_distances.data)
 
-cbind(fst_distances.data.melted, in.water.distances.melted)
+### Save the least cost distances in a mtrix object
+leastDist.km.matrix <- (as.matrix(leastDist.km))
+
+### Rename this object
+colnames(leastDist.km.matrix) <- colnames(fst_distances.data)
+row.names(leastDist.km.matrix) <- colnames(fst_distances.data)
+
+### Change format wide to long
+in.water.distances.melted <- melt(leastDist.km.matrix)
+in.water.distances.melted
+
+### Merge both datasets (geographic with genomic)
+fst.in.water.distances <- cbind(fst_distances.data.melted, in.water.distances.melted$value)
+colnames(fst.in.water.distances) <- c("Site1","Site2","FST","DISTANCE")
+fst.in.water.distances$FST2 <- (1-fst.in.water.distances$FST)/fst.in.water.distances$FST
+
+### Add region information
+fst.in.water.distances$REGION1 <- ifelse(fst.in.water.distances$Site1=="SAB", "andaman",ifelse(fst.in.water.distances$Site1=="BAT"|fst.in.water.distances$Site1=="PAR"|fst.in.water.distances $Site1=="GCD","east","west"))
+fst.in.water.distances$REGION2 <- ifelse(fst.in.water.distances$Site2=="SAB", "andaman",ifelse(fst.in.water.distances$Site2=="BAT"|fst.in.water.distances$Site2=="PAR"|fst.in.water.distances $Site2=="GCD","east","west"))
+fst.in.water.distances$COMPARISON <- paste(fst.in.water.distances$REGION1,"-",fst.in.water.distances$REGION2)
+fst.in.water.distances$COMPARISON_SUMMARY <- ifelse(fst.in.water.distances$COMPARISON =="andaman -andaman"|fst.in.water.distances$COMPARISON =="east - east"| fst.in.water.distances$COMPARISON == "west - west","within regions","between regions")
+
+### Create a nice ggplot
+fst.in.water.distances  %>%
+  ggplot(aes(y=FST2, x=DISTANCE, fill=COMPARISON_SUMMARY))+
+  geom_point(pch=21, size=2)+
+  scale_fill_manual(values=c("grey","black"), name = "")+
+  theme_classic()+
+  ylab("(1-Fst/fst)")+
+  xlab("In-water geographic distances")
+ggsave("Isolation-by-distance.pdf", width=8, height=8)
