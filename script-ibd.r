@@ -66,7 +66,7 @@ pdf("Marmap_seaurchins.pdf")
 plot(bathydata, lwd = c(0.3, 1), lty = c(1, 1),
      deep = c(-4500, 0), shallow = c(-50, 0), 
      step = c(500, 0),
-     col = c("grey", "black"), drawlabels = c(FALSE, FALSE))
+     col = c("white", "black"), drawlabels = c(FALSE, FALSE))
 scaleBathy(bathydata, deg = 3, x = "bottomleft", inset = 5)
 points(sites$Longitude, sites$Latitude, pch = 21, col = "black", bg = "red", cex = 1)
 text(sites$Longitude, sites$Latitude,sites$Code, pos = 1,cex = 0.5)
@@ -177,6 +177,6 @@ fst.in.water.distances  %>%
   geom_point(pch=21, size=2)+
   scale_fill_manual(values=c("grey","black"), name = "")+
   theme_classic()+
-  ylab("(1-Fst/fst)")+
-  xlab("In-water geographic distances")
-ggsave("Isolation-by-distance.pdf", width=8, height=8)
+  ylab("(1-Fst/Fst)")+
+  xlab("In-water geographic distances (in km)")
+ggsave("Isolation-by-distance.png", width=6, height=4)
