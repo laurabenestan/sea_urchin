@@ -22,9 +22,8 @@ script-sampling-map.R
 -----------------------  
   
 A total of 11 sampling locations were sampled.
-About 10 individuals were genotyped per sampling locations, for a total of 87 individuals kept after filtering.
-
-![Figure 1. Sampling design](sampling-design.png)
+About 10 individuals were genotyped per sampling locations, for a total of 
+87 individuals kept after filtering.
 
 ## 2 - Estimating genetic differentiation among populations
 -----------------------   
@@ -34,7 +33,7 @@ This function estimate the pairwise FST values according to Weir & Cockerham (19
 FST measures the amount of genetic differentiation among populations (and simultaneously the extent to which individuals within populations are similar to one another).  
 A total of 55 pairwise comparisons (i.e. (n*(n-1))/2; 11*10)/2) ranges from 0 to 0.055.  
 
-![Figure 2 - Index of genetic differentiation](FST-matrix.png){weight=60%}
+![Figure 2 - Index of genetic differentiation](FST-matrix.png)
 
 A total of 48 P-values were non significant.
 The P-values were tighly associated to the boostrap tree obtained on FST.
